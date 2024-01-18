@@ -1,13 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 const ListadoGastos = () => {
   return (
-    <div>
-      <p>
-        Desde Listado Gastos
-      </p>
+    <div className='listado-gastos contenedor'>
+      <h2>Gastos</h2>
+
     </div>
   )
 }
 
-export default ListadoGastos
+export default ListadoGastos;
