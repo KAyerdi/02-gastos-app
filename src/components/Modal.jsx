@@ -4,15 +4,12 @@ import Mensaje from "./Mensaje";
 
 const Modal = ({ setModal, animarModal, setAnimarModal, guardarGasto }) => {
   const [mensaje, setMensaje] = useState('')
-
   const [nombre, setNombre] = useState("");
   const [cantidad, setCantidad] = useState("");
   const [categoria, setCategoria] = useState("");
 
   const ocultarModal = () => {
-    setModal(false);
-    setAnimarModal(false);
-
+    setAnimarModal(false)
     setTimeout(() => {
       setModal(false);
     }, 500);
