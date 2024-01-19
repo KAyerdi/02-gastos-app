@@ -1,6 +1,10 @@
-import React from "react";
+import { useEffect } from "react";
 
-const ControlPresupuesto = ({ presupuesto }) => {
+const ControlPresupuesto = ({ gastos, presupuesto }) => {
+
+  useEffect(() => {
+    console.log('componente listo')
+  },[gastos])
 
   const formatearCantidad = (cantidad) => {
     return cantidad.toLocaleString("en-US", {
