@@ -32,21 +32,25 @@ const Gasto = ({ gasto }) => {
 
   const leadingActions = () => {
     <LeadingActions>
-      <SwipeAction onClick={() => console.log('editar...')}>
+      <SwipeAction onClick={() => console.log("Editar...")}>
         Editar
       </SwipeAction>
-    </LeadingActions>
-  }
+    </LeadingActions>;
+  };
 
-  const trailingActions = () =>{
-    <TrailingActions></TrailingActions>
-  }
+  const trailingActions = () => {
+    <TrailingActions>
+      <SwipeAction onClick={() => console.log("Eliminar")}>
+        Eliminar
+      </SwipeAction>
+    </TrailingActions>;
+  };
 
   return (
     <SwipeableList>
       <SwipeableListItem
-      leadingActions={leadingActions()}
-      trailingActions={trailingActions()}
+        leadingActions={leadingActions()}
+        trailingActions={trailingActions()}
       >
         <div className='gasto sombra'>
           <div className='contenido-gasto'>
