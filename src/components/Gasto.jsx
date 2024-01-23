@@ -30,21 +30,21 @@ const diccionarioIconos = {
 const Gasto = ({ gasto }) => {
   const { categoria, nombre, cantidad, id, fecha } = gasto;
 
-  const leadingActions = () => {
+  const leadingActions = () => (
     <LeadingActions>
       <SwipeAction onClick={() => console.log("Editar...")}>
         Editar
         </SwipeAction>
-    </LeadingActions>;
-  };
+    </LeadingActions>
+  );
 
-  const trailingActions = () => {
+  const trailingActions = () => (
     <TrailingActions>
       <SwipeAction onClick={() => console.log("Eliminar")}>
         Eliminar
       </SwipeAction>
-    </TrailingActions>;
-  };
+    </TrailingActions>
+  );
 
   return (
     <SwipeableList>
