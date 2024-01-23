@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import ListadoGastos from "./components/ListadoGastos";
 import Modal from './components/Modal';
@@ -52,7 +52,7 @@ function App() {
             <ListadoGastos
               gastos={gastos}
               setGastoEditar={setGastoEditar}
-              
+
               />
           </main>
           <div className='nuevo-gasto'>
