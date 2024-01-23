@@ -34,7 +34,7 @@ const Gasto = ({ gasto }) => {
     <LeadingActions>
       <SwipeAction onClick={() => console.log("Editar...")}>
         Editar
-      </SwipeAction>
+        </SwipeAction>
     </LeadingActions>;
   };
 
