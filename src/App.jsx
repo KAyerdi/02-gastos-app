@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import ListadoGastos from "./components/ListadoGastos";
 import Modal from './components/Modal';
@@ -15,9 +15,20 @@ function App() {
 
   const [gastoEditar, setGastoEditar] = useState({});
 
+  useEffect(() => {
+  if ( Object.keys(gastoEditar).length > 0) {
+    setModal(true)
+
+    setTimeout(() => {
+    setAnimarModal(true)
+    }, 500);
+  }
+  }, [gastoEditar])
+
 
   const handleNuevoGasto = () => {
     setModal(true)
+    setGastoEditar({})
 
     setTimeout(() => {
     setAnimarModal(true)
@@ -71,6 +82,7 @@ function App() {
           animarModal={animarModal}
           setAnimarModal={setAnimarModal}
           guardarGasto={guardarGasto}
+          gastoEditar={gastoEditar}
         />
       )}
     </div>
