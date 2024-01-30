@@ -25,6 +25,9 @@ function App() {
   }
   }, [gastoEditar])
 
+  useEffect(() => {
+  localStorage.setItem('presupuesto', presupuesto ?? 0)
+  }, [presupuesto])
 
   const handleNuevoGasto = () => {
     setModal(true)
