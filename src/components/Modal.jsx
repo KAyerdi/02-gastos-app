@@ -11,6 +11,7 @@ const Modal = ({  setModal,
   const [nombre, setNombre] = useState("");
   const [cantidad, setCantidad] = useState("");
   const [categoria, setCategoria] = useState("");
+  const [fecha, setFecha] = useState("");
   const [id, setId] = useState('')
 
   useEffect(() =>{
@@ -19,6 +20,7 @@ const Modal = ({  setModal,
           setCantidad(gastoEditar.cantidad)
           setCategoria(gastoEditar.categoria)
           setId(gastoEditar.id)
+          setFecha(gastoEditar.fecha)
     }
   }, []);
 
@@ -41,7 +43,7 @@ const Modal = ({  setModal,
       return;
     }
     
-    guardarGasto({nombre, cantidad, categoria, id})
+    guardarGasto({nombre, cantidad, categoria, id, fecha})
   }
 
   return (

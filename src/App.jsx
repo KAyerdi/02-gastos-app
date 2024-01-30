@@ -36,9 +36,12 @@ function App() {
   }
 
   const guardarGasto = gasto => {
+    console.log(gasto)
   if (gasto.id){
     //Actualizar
-    const gastoActualizados = gasto.map( gastoState => gastoState.id === gasto.id ? gasto : gastoState)
+    const gastosActualizados = gastos.map( gastoState => gastoState.id === gasto.id ? gasto : gastoState)
+
+    setGastos(gastosActualizados);
   } else {
     //Nuevo Gasto
     gasto.id = generarId();
