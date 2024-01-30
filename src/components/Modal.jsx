@@ -6,7 +6,7 @@ const Modal = ({  setModal,
                   animarModal,
                   setAnimarModal,
                   guardarGasto,
-                  gastoEditar, }) => {
+                  gastoEditar,}) => {
   const [mensaje, setMensaje] = useState('')
   const [nombre, setNombre] = useState("");
   const [cantidad, setCantidad] = useState("");
@@ -50,7 +50,7 @@ const Modal = ({  setModal,
       <form
       onSubmit={handleSubmit}
       className={`formulario ${animarModal ? "animar" : ""}`}>
-        <legend>Nuevo Gasto</legend>
+        <legend>{gastoEditar.nombre ? 'Editando Gasto' : 'Nuevo Gasto'}</legend>
 
         <div className='campo'>
           <label htmlFor='nombre'>Nombre Gasto</label>
@@ -95,7 +95,7 @@ const Modal = ({  setModal,
             <option value='suscripciones'>Suscripciones</option>
           </select>
         </div>
-        <input type='submit' value='Añadir Gasto' />
+        <input type='submit' value={gastoEditar.nombre ? 'Editando Gasto' : 'Nuevo Gasto'} />
       </form>
     </div>
   );
