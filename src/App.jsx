@@ -57,7 +57,9 @@ function App() {
 
 
   const eliminarGasto = id => {
-    console.log('eliminando', id)
+    const gastosActualizados = gastos.filter(gasto => gasto.id !== id);
+
+    setGastos(gastosActualizados)
   }
   return (
     <div className={modal ? "fijar" : ""}>
