@@ -27,7 +27,7 @@ const diccionarioIconos = {
   suscripciones: IconoSuscripciones,
 };
 
-const Gasto = ({ gasto, setGastoEditar, eliminarGasto }) => {
+const Gasto = ({ gasto, setGasto, Editar, eliminarGasto }) => {
   const { categoria, nombre, cantidad, id, fecha } = gasto;
 
   const leadingActions = () => (
