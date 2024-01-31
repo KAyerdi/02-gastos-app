@@ -20,6 +20,7 @@ const Header = ({
         setGastos={setGastos}
         presupuesto={presupuesto}
         setPresupuesto={setPresupuesto}
+        setIsValidPresupuesto={setIsValidPresupuesto}
         />
       ) : (
         <NuevoPresupuesto

@@ -6,7 +6,8 @@ const ControlPresupuesto = ({
   gastos,
   setGastos,
   presupuesto,
-  setPresupuesto, }) => {
+  setPresupuesto,
+  setIsValidPresupuesto}) => {
   const [porcentaje, setPorcentaje] = useState(0)
   const [disponible, setDisponible] = useState(0)
   const [gastado, setGastado] = useState(0)
@@ -39,7 +40,13 @@ const ControlPresupuesto = ({
   };
 
   const handleResetApp = () => {
-    console.log('reseteando app')
+    const resultado = confirm('Deseas reiniciar presupuesto y gastos?');
+
+    if(resultado){
+      setGastos([])
+      setPresupuesto(0)
+      setIsValidPresupuesto(false)
+    }
   }
 
   return (
